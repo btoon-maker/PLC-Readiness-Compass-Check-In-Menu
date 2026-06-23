@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLC Readiness Check-In Menu | PLC Year Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">PLC Readiness Check-In Menu</div>
+    <h1>PLC Year Check-In Planner</h1>
+    <p>A short, optional tool to help a facilitator decide when shorter check-ins may be useful across the school year.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a class="active" href="planner.html">PLC Year Planner</a>
+    <a href="check-in.html">Check-In Menu</a>
+    <a href="dashboard.html">Team Dashboard</a>
+    <a href="facilitator-guide.html">Facilitator Guide</a>
+  </div>
+</nav>
+
+<main>
+  <section class="card">
+    <h2>How this works</h2>
+    <p>Answer as few or as many questions as you like. The planner suggests a starting check-in based on your current PLC context, and, if you add a start date, sketches approximate windows across the year.</p>
+    <div class="warm-notice">
+      <strong>This is guidance, not a required schedule.</strong> Check-ins can be used independently and do not need to be completed in order. Choose one next step rather than trying to address every domain at once.
+    </div>
+    <p class="small"><strong>Privacy note:</strong> Nothing on this page is stored or transmitted. Your inputs stay in your browser and disappear when you close the tab.</p>
+  </section>
+
+  <section class="card no-print">
+    <h2>Tell us a little about your PLC</h2>
+
+    <div class="planner-field">
+      <label for="contextSelect">Current PLC context</label>
+      <select id="contextSelect">
+        <option value="">— Select one (optional) —</option>
+        <option value="new">New or restarting PLC</option>
+        <option value="admin">Admin priorities are shaping the work</option>
+        <option value="purpose">Team needs shared purpose</option>
+        <option value="data">Team is in a data/instructional cycle</option>
+        <option value="practice">Team is ready to examine practice</option>
+        <option value="rushed">Meetings feel rushed or compliance-based</option>
+        <option value="midyear">Midyear reset</option>
+        <option value="endyear">End-of-year reflection</option>
+      </select>
+    </div>
+
+    <div class="planner-field">
+      <label for="startDate">School year start date (optional)</label>
+      <input type="date" id="startDate">
+    </div>
+
+    <div class="planner-field">
+      <label for="resetDate">Midyear or semester reset date (optional)</label>
+      <input type="date" id="resetDate">
+    </div>
+
+    <div class="planner-field">
+      <label for="frequency">PLC meeting frequency (optional)</label>
+      <select id="frequency">
+        <option value="">— Select one —</option>
+        <option value="weekly">Weekly</option>
+        <option value="biweekly">Every other week</option>
+        <option value="monthly">Monthly</option>
+        <option value="irregular">Irregular</option>
+      </select>
+    </div>
+
+    <button type="button" id="generatePlan">Show Recommended Check-Ins</button>
+  </section>
+
+  <section id="plannerOutput" class="card" style="display:none;">
+    <!-- Recommendations rendered by script.js -->
+  </section>
+
+  <section id="plannerExportRow" class="card no-print" style="display:none;">
+    <button type="button" id="exportPlannerPdf">Export / Save Plan as PDF</button>
+    <p class="export-note">This opens your browser print window. Choose “Save as PDF” as the destination. Recommended check-ins print as text.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Designed by Brooke Toon for TEL 708 in the ASU EdD Leadership and Innovation Program. Concept, framework, and tool design directed by the author; coding support provided with assistance from ChatGPT.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
