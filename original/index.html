@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLC Readiness Compass | Individual Assessment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">PLC Readiness Compass</div>
+    <h1>Individual PLC Readiness Assessment</h1>
+    <p>A private reflection tool for noticing the conditions that help a PLC move beyond meeting logistics into shared learning, instructional problem-solving, and collective action.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="active" href="index.html">Individual Assessment</a>
+    <a href="dashboard.html">Team Dashboard</a>
+    <a href="facilitator-guide.html">Facilitator Guide</a>
+  </div>
+</nav>
+
+<main>
+  <div id="introCards">
+    <section class="card">
+      <h2>Before You Begin</h2>
+      <p>This is not meant to grade your PLC or evaluate individual teachers.</p>
+      <p> It is meant to help each person pause and think: <strong>What conditions are helping our PLC function as a professional learning community, and what conditions may need attention before we can engage in deeper collaborative inquiry?</strong></p>
+      <p>Answer based on what you have actually experienced in your most recent PLC meetings. <i>When possible, think of a concrete example before choosing a rating.</i></p>
+      <p><strong>Estimated Time on Task</strong>: 10 miuntes</p>
+      <div class="notice">
+        <strong>Privacy note:</strong> This page does not store or transmit your responses. Your results stay in your browser unless you choose to copy and share your response code with your PLC facilitator.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Rating Scale</h2>
+      <div class="scale">
+        <div><strong>1 → Not Yet Evident</strong>Rarely or not yet visible in our PLC work.</div>
+        <div><strong>2 → Emerging</strong>Happens sometimes, but not consistently yet.</div>
+        <div><strong>3 → Developing</strong>Present and helpful, but still needs strengthening.</div>
+        <div><strong>4 → Established</strong>A regular part of how our PLC works.</div>
+      </div>
+    </section>
+  </div>
+
+  <form id="assessmentForm"></form>
+
+  <section class="card no-print">
+    <button type="button" id="generateIndividual">Generate My Summary</button>
+  </section>
+
+  <section id="individualResults" class="card" style="display:none;">
+    <div class="print-only">
+      <h1>Individual PLC Readiness Summary</h1>
+      <p>This summary is for private reflection and voluntary sharing.</p>
+    </div>
+
+    <div id="individualOverall"></div>
+    <h3>Domain Scores</h3>
+    <div id="individualBars"></div>
+
+    <div id="individualEvidenceNotes"></div>
+
+    <h3>Your Response Code</h3>
+    <p>Copy this code and share it with the facilitator only if you want your ratings included in the team dashboard. Your written evidence notes appear only in your individual summary/PDF. They are not included in the team dashboard code.</p>
+    <div id="responseCode" class="code-box"></div>
+    <button type="button" id="copyCode" class="no-print">Copy Code</button>
+    <button type="button" id="exportIndividualPdf" class="secondary no-print">Export / Save Summary as PDF</button>
+    <p class="export-note no-print">This opens your browser print window. Choose “Save as PDF” as the destination.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Designed by Brooke Toon for TEL 708 in the ASU EdD Leadership and Innovation Program. Concept, framework, and tool design directed by the author; coding support provided with assistance from ChatGPT.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

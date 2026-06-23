@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLC Readiness Compass | Team Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">PLC Readiness Compass</div>
+    <h1>Team Dashboard and Report Generator</h1>
+    <p>Turn individual reflection into a printable PLC conversation report.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html">Individual Assessment</a>
+    <a class="active" href="dashboard.html">Team Dashboard</a>
+    <a href="facilitator-guide.html">Facilitator Guide</a>
+  </div>
+</nav>
+
+<main>
+  <section class="card no-print">
+    <h2>Paste Individual Response Codes</h2>
+    <p>Ask each PLC member to complete the individual assessment and share their response code if they choose to participate in the team report. Paste one code per line.</p>
+    <div class="warm-notice">
+      <strong>Facilitator note:</strong> The dashboard should be used to guide conversation, not to prove whether the team is “good” or “bad” at PLC work. Begin with evidence, notice where perceptions differ, and then choose one realistic next step.
+    </div>
+    <textarea id="codesInput" placeholder="PLC-COMPASS|3,3,2,4|..."></textarea>
+    <button type="button" id="generateDashboard">Generate Team Dashboard</button>
+    <button type="button" id="loadSample" class="secondary">Load Sample Data</button>
+  </section>
+
+  <section id="dashboardResults" style="display:none;">
+    <section class="card print-only">
+      <h1>PLC Readiness Conversation Report</h1>
+      <p>A team-level snapshot of readiness conditions, perception gaps, and possible next steps.</p>
+    </section>
+
+    <section id="teamSummary" class="card"></section>
+
+    <section class="card">
+      <h3>Team Readiness Profile</h3>
+      <div id="teamBars"></div>
+    </section>
+
+    <section id="domainTable" class="card"></section>
+
+    <section id="strengthGap" class="card"></section>
+
+    <section id="conversationPrompts" class="card"></section>
+
+    <section id="actionPlan" class="card"></section>
+
+    <section class="card no-print">
+      <button type="button" id="exportDashboardPdf">Export / Save Report as PDF</button>
+      <p class="export-note">This opens your browser print window. Choose “Save as PDF” as the destination.</p>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <p>Designed by Brooke Toon for TEL 708 in the ASU EdD Leadership and Innovation Program. Concept, framework, and tool design directed by the author; coding support provided with assistance from ChatGPT.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
