@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLC Readiness Check-In Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">PLC Readiness Check-In Menu</div>
+    <h1>Choose a PLC Readiness Check-In</h1>
+    <p>A private reflection tool for noticing the conditions that help a PLC move beyond meeting logistics into shared learning, instructional problem-solving, and collective action. Use the full Compass for a comprehensive baseline, or a single short check-in when time is tight.</p>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a class="active" href="index.html">Check-In Menu</a>
+    <a href="dashboard.html">Team Dashboard</a>
+    <a href="planner.html">PLC Year Planner</a>
+    <a href="facilitator-guide.html">Facilitator Guide</a>
+    <a href="../index.html">Original Full Compass</a>
+  </div>
+</nav>
+
+<main>
+  <!-- ===== Menu view ===== -->
+  <div id="checkinMenu">
+    <section class="card menu-intro">
+      <h2>Pick the check-in that fits where your PLC is right now</h2>
+      <p>The full Compass is still available as a comprehensive beginning-of-year or midyear readiness assessment. The shorter check-ins each focus on one readiness condition so a team can reflect without fatigue.</p>
+      <p class="small">Check-ins can be used independently and do not need to be completed in order. Not sure where to start? The <a href="planner.html">PLC Year Planner</a> can suggest one.</p>
+      <div class="notice">
+        <strong>Privacy note:</strong> This page does not store or transmit your responses. Your results stay in your browser unless you choose to copy and share your response code with your PLC facilitator.
+      </div>
+    </section>
+
+    <div class="checkin-grid">
+      <!-- Cards rendered by script.js from the CHECKINS map -->
+    </div>
+  </div>
+
+  <!-- ===== Scoped assessment view ===== -->
+  <div id="assessmentView" style="display:none;">
+    <section class="card no-print">
+      <button type="button" id="backToMenu" class="secondary">&larr; Choose a different check-in</button>
+    </section>
+
+    <section class="card">
+      <h2 id="activeCheckinTitle">Check-In</h2>
+      <div id="activeCheckinIntro"></div>
+      <p>This is not meant to grade your PLC or evaluate individual teachers. It is meant to help each person pause and notice which conditions are helping the PLC function, and which may need attention before deeper collaborative inquiry.</p>
+      <div class="notice">
+        <strong>Privacy note:</strong> Your responses stay in your browser. Only the response code is shareable, and your written evidence notes are never included in it.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Rating Scale</h2>
+      <div class="scale">
+        <div><strong>1 → Not Yet Evident</strong>Rarely or not yet visible in our PLC work.</div>
+        <div><strong>2 → Emerging</strong>Happens sometimes, but not consistently yet.</div>
+        <div><strong>3 → Developing</strong>Present and helpful, but still needs strengthening.</div>
+        <div><strong>4 → Established</strong>A regular part of how our PLC works.</div>
+      </div>
+    </section>
+
+    <form id="assessmentForm"></form>
+
+    <section class="card no-print">
+      <button type="button" id="generateIndividual">Generate My Summary</button>
+    </section>
+
+    <section id="individualResults" class="card" style="display:none;">
+      <div class="print-only">
+        <h1>Individual PLC Readiness Summary</h1>
+        <p>This summary is for private reflection and voluntary sharing.</p>
+      </div>
+
+      <div id="individualOverall"></div>
+      <h3>Domain Scores</h3>
+      <div id="individualBars"></div>
+
+      <div id="individualEvidenceNotes"></div>
+
+      <h3>Your Response Code</h3>
+      <p>Copy this code and share it with the facilitator only if you want your ratings included in the team dashboard. Your written evidence notes appear only in your individual summary/PDF. They are not included in the team dashboard code.</p>
+      <div id="responseCode" class="code-box"></div>
+      <button type="button" id="copyCode" class="no-print">Copy Code</button>
+      <button type="button" id="exportIndividualPdf" class="secondary no-print">Export / Save Summary as PDF</button>
+      <p class="export-note no-print">This opens your browser print window. Choose “Save as PDF” as the destination.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>Designed by Brooke Toon for TEL 708 in the ASU EdD Leadership and Innovation Program. Concept, framework, and tool design directed by the author; coding support provided with assistance from ChatGPT.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
