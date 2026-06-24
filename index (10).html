@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLC Readiness Compass | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Self-contained accordion for the "Full Compass or Short Check-In?" helper */
+    .accordion {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      margin-top: 1.25rem;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .accordion > summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 1rem 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .accordion > summary::-webkit-details-marker { display: none; }
+    .accordion > summary::after {
+      content: "+";
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--accent-2);
+      flex: 0 0 auto;
+    }
+    .accordion[open] > summary::after { content: "\2013"; }
+    .accordion[open] > summary { border-bottom: 1px solid var(--border); }
+    .accordion-body { padding: 1rem 1.1rem 1.25rem; }
+    .accordion-body ul { margin: .4rem 0 0; padding-left: 1.2rem; }
+    .accordion-body li { margin: .3rem 0; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="kicker">PLC Readiness Compass</div>
+    <h1>PLC Readiness Compass</h1>
+    <p>Reflection and conversation tools for stronger professional learning communities.</p>
+  </div>
+</header>
+
+<main>
+  <!-- 1) What it is ===================================================== -->
+  <section class="card home-intro">
+    <h2>What the PLC Readiness Compass is</h2>
+    <p>The PLC Readiness Compass is a flexible reflection and facilitation hub that helps professional learning communities notice readiness conditions, guide honest conversation, and choose one meaningful next step.</p>
+    <div class="notice">
+      <strong>What it is not:</strong> not teacher evaluation, not a compliance checklist, not a psychometric test. Scores are conversation starters, not measurement. Nothing is stored or transmitted unless someone chooses to share a response code.
+    </div>
+  </section>
+
+  <!-- 2) Five readiness areas (the map) ================================= -->
+  <section class="card">
+    <h2>Five Readiness Areas</h2>
+    <p class="small">The conditions the Compass is built around. A short check-in looks at one; the full Compass looks at all five.</p>
+    <div class="area-grid">
+      <div class="area-card">
+        <h4>Shared Leadership</h4>
+        <p>Teacher voice and shared ownership, even when a lead or administrator guides the agenda.</p>
+      </div>
+      <div class="area-card">
+        <h4>Shared Purpose</h4>
+        <p>A shared reason for meeting that connects to student learning.</p>
+      </div>
+      <div class="area-card">
+        <h4>Collective Learning</h4>
+        <p>Using evidence, trying ideas, and following up on what helped students.</p>
+      </div>
+      <div class="area-card">
+        <h4>Shared Practice</h4>
+        <p>Making real teaching practice visible to one another in low-risk ways.</p>
+      </div>
+      <div class="area-card">
+        <h4>Supportive Conditions</h4>
+        <p>The time, trust, and norms that let PLC work actually happen.</p>
+      </div>
+    </div>
+    <p class="small">“Shared Purpose” is our label for Hord and Sommers’ “Shared Values and Vision.” Full framework language is in the <a href="facilitator-guide.html">Facilitator Guide</a>.</p>
+  </section>
+
+  <!-- 3) How the process works ========================================= -->
+  <section class="card">
+    <h2>How the Process Works</h2>
+    <p class="small">Reflection comes first; the dashboard is step three, not the starting point.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="num">1</span>
+        <h4>Reflect privately</h4>
+        <p>Each member rates privately, thinking of evidence first.</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h4>Share voluntarily</h4>
+        <p>Members choose whether to share a response code; written notes stay private.</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h4>Generate a team report</h4>
+        <p>The dashboard turns shared codes into a report of patterns and perception gaps.</p>
+      </div>
+      <div class="step">
+        <span class="num">4</span>
+        <h4>Choose one next step</h4>
+        <p>The team picks one realistic move for the next cycle — not a fix for everything.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) Choose your starting point + accordion ======================== -->
+  <section class="card">
+    <h2>Choose Your Starting Point</h2>
+    <div class="home-grid">
+      <div class="home-card">
+        <h3>PLC Year Planner</h3>
+        <p>“Help me decide when or which check-in fits.”</p>
+        <div class="spacer"></div>
+        <a class="btn-link btn-block" href="planner.html">Use the Planner</a>
+      </div>
+
+      <div class="home-card">
+        <h3>Check-In Menu</h3>
+        <p>“I’m ready to choose the full Compass or a short check-in.”</p>
+        <div class="spacer"></div>
+        <a class="btn-link btn-block" href="check-in.html">Choose a Check-In</a>
+      </div>
+
+      <div class="home-card">
+        <h3>Team Dashboard</h3>
+        <p>“I already have response codes to combine.”</p>
+        <div class="spacer"></div>
+        <a class="btn-link btn-block" href="dashboard.html">Open Dashboard</a>
+      </div>
+
+      <div class="home-card">
+        <h3>Facilitator Guide</h3>
+        <p>“I need support leading the conversation.”</p>
+        <div class="spacer"></div>
+        <a class="btn-link btn-block" href="facilitator-guide.html">Read the Guide</a>
+      </div>
+    </div>
+
+    <details class="accordion">
+      <summary>Not sure whether to use the Full Compass or a Short Check-In?</summary>
+      <div class="accordion-body">
+        <div class="grid">
+          <div class="result-card col-6">
+            <h4>Use the Full Compass when…</h4>
+            <ul>
+              <li>You are starting or restarting PLC work.</li>
+              <li>It is the beginning of the year or midyear.</li>
+              <li>The team needs a broad readiness baseline.</li>
+              <li>You want to look across all five readiness areas.</li>
+            </ul>
+          </div>
+          <div class="result-card col-6">
+            <h4>Use a Short Check-In when…</h4>
+            <ul>
+              <li>The team only has 10–15 minutes.</li>
+              <li>One readiness condition needs attention.</li>
+              <li>You want to reduce fatigue.</li>
+              <li>The team is in the middle of an ongoing PLC cycle.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="small">Both live in the Check-In Menu — the full Compass is built in, so there is no separate version to open.</p>
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <p>Designed by Brooke Toon for TEL 708 in the ASU EdD Leadership and Innovation Program. Concept, framework, and tool design directed by the author; coding support provided with assistance from ChatGPT.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
